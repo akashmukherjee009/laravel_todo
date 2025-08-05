@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Trash</h1>
+        <h1>Trash Bin</h1>
         <table class="table">
             <thead>
                 <tr>
