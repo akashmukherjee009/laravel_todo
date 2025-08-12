@@ -25,7 +25,7 @@
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{$i->header}}</td>
                     <td>{{$i->body}}</td>
-                    <td><a href="/edit/{{$i->id}}"><button class= 'btn btn-primary'>Restore</button></a>  <a href="/delete/{{$i->id}}"><button class="btn btn-danger">Delete Permamently</button></a></td>
+                    <td><a href="/edit/{{$i->id}}"><button class= 'btn btn-primary'>Restore</button></a>`  <a href="/permanent/delete/{{$i->id}}"><button class="btn btn-danger">Delete Per`mamently</button></a></td>
                 </tr>
                 @endforeach
             </tbody>

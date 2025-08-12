@@ -18,3 +18,6 @@ Route::post('/update-data/{id}', [BlogController::class, 'update']);
 // });
 Route::get('/delete/{id}', [BlogController::class, 'delete']);
 Route::get('/edit/{id}', [BlogController::class, 'getDataById']);
+
+
+Route::get('/permanent/delete/{id}', [BlogController::class, 'pdelete']);

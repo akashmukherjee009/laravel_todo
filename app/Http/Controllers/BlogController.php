@@ -61,6 +61,14 @@ class BlogController extends Controller
         $c->save();
         return redirect()->back();
     }
+    public function pdelete($id){
+        // echo $id;die;
+        $c= Todo::withTrashed()->find($id);
+        if (!is_null($c)) {
+            $c->forceDelete();
+        }
 
+        return redirect()->back();
+    }
 
 }
