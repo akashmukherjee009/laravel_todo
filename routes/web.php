@@ -21,3 +21,4 @@ Route::get('/edit/{id}', [BlogController::class, 'getDataById']);
 
 
 Route::get('/permanent/delete/{id}', [BlogController::class, 'pdelete']);
+Route::get('/restore/{id}', [BlogController::class, 'restore']);
