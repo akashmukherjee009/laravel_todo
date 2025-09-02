@@ -78,5 +78,8 @@ class BlogController extends Controller
 
         return redirect()->back();
     }
+    public function fetchApi(){
+        return response()->json(['message' => 'Blog index works']);
+    }
 
 }
