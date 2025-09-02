@@ -70,5 +70,16 @@ class BlogController extends Controller
 
         return redirect()->back();
     }
+    public function restore($id){
+        $c= Todo::withTrashed()->find($id);
+        if (!is_null($c)) {
+            $c->restore();
+        }
+
+        return redirect()->back();
+    }
+    public function fetchApi(){
+        return response()->json(['message' => 'Blog index works']);
+    }
 
 }

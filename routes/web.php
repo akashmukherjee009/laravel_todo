@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', [BlogController::class, 'index']);
 
@@ -21,3 +22,11 @@ Route::get('/edit/{id}', [BlogController::class, 'getDataById']);
 
 
 Route::get('/permanent/delete/{id}', [BlogController::class, 'pdelete']);
+Route::get('/restore/{id}', [BlogController::class, 'restore']);
+
+//Auth Code
+Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
